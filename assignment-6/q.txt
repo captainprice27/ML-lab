@@ -1,1 +1,28 @@
+Continuous Evaluation: 70%, Viva: 30%
 
+Assignment 6:
+
+i. Download and preprocess the sentiment analysis dataset from
+https://www.kaggle.com/snap/amazon-fine-food-reviews. Download the Glove
+word vectors from https://nlp.standford.edu/data/glove.6B.zip and extract the 100-
+dimensional file (glove.6B.100d.txt) from the zipped folder.
+
+ii. Preprocess the review dataset by considering the column “review score” > 3 as
+positive reviews and others as negative reviews. For training on local machine
+considers 5000 positive and negative reviews each for the training dataset.
+Consider 2000 reviews for the rest dataset and validation dataset each. Strip the
+length of each review sentence (number of words) according to your computation
+availability.
+
+iii. Train RNN model with the FC layer applied in the final hidden layer output using
+the following parameter:
+Sl. No. RNN RNN Layer LSTM Size Activation FC Layer Embedding
+Layer
+1 LSTM 1 64 ReLU 1 GloVe
+2 GRU 1 64 ReLU 1 GloVe
+
+iv. For the best model above, vary the size of RNN: [32, 128]
+v. For the best model above, vary the number of stack layers of RNN: [2, 3, 4]. One is
+done previously.
+vi. For the best model above, try Dropout: 0.1 and any other regularization parameters.
+Submit a report with results.

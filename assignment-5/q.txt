@@ -1,0 +1,76 @@
+Download and extract the flower image dataset from
+https://www.kaggle.com/alxmamaev/flowers-recognition.
+
+ii. The dataset contains five classes of flower images of variable size namely
+chamomile, tulip, rose, sunflower, and dandelion. Resize all images to 80 × 80
+pixels and convert all colour images to grey images.
+
+iii. Randomly shuffle all images to create training, test set with ratio 90: 10,
+respectively. (Reduce the training size by 1/5, if computation resources are
+limited.)
+iv. Train a Convolutional Neural Network with max pooling and a fully connected
+layer at top, to classify the flower images. Now run the network by changing the
+following hyper-parameters:
+a. Analyze the performance of convolution window kernel size
+Convolution
+Layers
+
+Convolution
+Kernel Size
+
+Convolution
+Filters Size
+Pooling
+Layers
+Activation Fully
+Connected
+Layer (After
+Flatten)
+Regularization
+
+3 (3 × 3, 3 × 3, 3 × 3) [16,32,64] Max
+Pooling
+ReLU 1 Dropout of 0.1
+after each layer
+
+3 (3 × 3, 3 × 3, 5 × 5) [16,32,64] Max
+Pooling
+ReLU 1 Dropout of 0.1
+after each layer
+
+3 (3 × 3, 5 × 5, 5 × 5) [16,32,64] Max
+Pooling
+ReLU 1 Dropout of 0.1
+after each layer
+
+3 (5 × 5, 5 × 5, 5 × 5) [16,32,64] Max
+Pooling
+ReLU 1 Dropout of 0.1
+after each layer
+b. For the best set of parameters obtained above, use two and three fully connected
+layers (After Flatten).
+c. For the best set of parameters obtained above, use average pooling instead of
+Max pooling.
+d. For the best set of parameters obtained above, use the activation function:
+Sigmoid, ReLU, Leaky ReLU (� = 0.01).
+e. For the best set of parameters from the above runs vary the regularization
+parameter:
+Regularization
+Dropout of 0.25 after each layer
+Batch normalization after each layer (except the first)
+Dropout of 0.1 after each layer along with Batch normalization after each
+layer (except the first)
+
+f. For the best set of parameters from the above runs, add [1, 2, 3] more
+convolution layers, and compare the size of trainable parameters and compare
+the time required to train each model for 10 epochs.
+g. For the best set of parameters obtained here repeat the experimentation for
+colour images and visualize the test result.
+
+v. Plot the graph for the loss vs epoch and accuracy (train, test set) vs epoch for all the
+above cases. Also, plot the accuracy for all experimentation in a bar graph along
+with the confusion matrix and F1 Score.
+vi. For the best model on the MNIST dataset in Assignment 4, train a model with
+MNIST data using the best set of parameters obtained in Question ��. Compare the
+test accuracy and the self-created images.
+Submit a report with results.
